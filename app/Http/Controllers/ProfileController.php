@@ -14,7 +14,7 @@ class ProfileController extends Controller {
 		if(!$user){
 			abourt(404);
 		}
-		return view('dashboard')->with('user', $user);
+		return view('user-profile.profile')->with('user', $user);
     }
 
     

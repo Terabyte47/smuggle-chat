@@ -69,6 +69,7 @@ Route::post('/signin', [
 ]);
 
 
+
 //Alerts
 // Route::get('/alert', function(){
 // 	return redirect()->route('signin')->with('success','User has been registered');
