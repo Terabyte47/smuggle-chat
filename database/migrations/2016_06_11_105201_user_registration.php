@@ -22,6 +22,7 @@ class UserRegistration extends Migration
             $table->string('email',255)->unique();
             $table->string('password',255);
             $table->string('physical_address')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }

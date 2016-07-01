@@ -134,8 +134,40 @@
 
 			<div class="row">
 				<div class="col-sm-3">
-					 @include('templates.partials.online-offline-users')
+					<div class="left-sidebar">				
+					<div class="brands_products" id="online-chats-holder">
+						<div class="brands-name">
+							<ul class="nav nav-pills nav-stacked" id="chats">
+							<h2> Chats</h2>
+							@if(!$chats->count())
+								<p class="text-center">You have no chats</p>
+
+							@else
+								
+								@foreach($chats as $chat)
+									@include('chat.partials.accepted-chats')
+								@endforeach
+								
+							@endif
+
+<!--							@if(Auth::user()->hasChatRequestPending())
+                                                        -->
+<!--                                                           @foreach($shares as $share)
+									@include('chat.partials.pending-chats')
+                                                            @endforeach-->
+<!--							@endif-->
+
+							<!--@foreach($chats as $chat)
+								@if(Auth::user()->hasChatRequestPending($chat))
+									<p>Waiting {{$chats->getFirstName()}} </p>
+								@endif
+							@endforeach -->
+
+							</ul>
+						</div>
+					</div>
 				</div>
+			</div>
 
 				
 				

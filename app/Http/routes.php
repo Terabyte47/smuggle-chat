@@ -68,6 +68,23 @@ Route::post('/signin', [
 
 ]);
 
+Route:: get('/chat/add/{firstname}',[
+		'uses'=>'\smugglechat\Http\Controllers\ChatController@getAdd',
+		'as'=>'addChat',
+
+	]);
+
+Route:: get('/chat/accept/{firstname}',[
+		'uses'=>'\smugglechat\Http\Controllers\ChatController@getAccept',
+		'as'=>'acceptChat',
+
+	]);
+
+Route:: post('/message',[
+		'uses'=>'\smugglechat\Http\Controllers\MessageController@postMessage',
+		'as'=>'chat.index',
+
+	]);
 
 
 //Alerts

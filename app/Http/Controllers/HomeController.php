@@ -1,12 +1,14 @@
 <?php
-use Illuminate\Http\Request;
 namespace smugglechat\Http\Controllers;
+use smugglechat\Models\Users;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller {
 
 	public function index() 
 	{
-		return view('home');
+		$users = Users::All();
+		return view('home')->with('users',$users);
     }
 
 }

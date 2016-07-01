@@ -26,10 +26,10 @@ class SigninController extends Controller {
     		]);
 
     	if(!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))){
-    		return redirect()->back()->with('danger', 'Incorrect username and password');
+    		return redirect()->back()->with('danger', 'Incorrect username or password');
     	}
 			
-    	return redirect()->route('dashboard')->with('success', 'Loggin Successfully!');
+    	return redirect()->route('home')->with('success', 'Loggin Successfully!');
     	
     }
 

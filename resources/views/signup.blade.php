@@ -75,7 +75,7 @@
 	</section>
 <style type="text/css">
 	input[type="password"]{
-  border: 1px $ccc solid;
+  border: 1px #ccc solid;
 }
 </style>
 @stop

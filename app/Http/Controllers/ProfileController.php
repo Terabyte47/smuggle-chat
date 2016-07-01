@@ -16,7 +16,4 @@ class ProfileController extends Controller {
 		}
 		return view('user-profile.profile')->with('user', $user);
     }
-
-    
-
 }

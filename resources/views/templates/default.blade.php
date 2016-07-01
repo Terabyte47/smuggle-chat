@@ -87,9 +87,10 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 							@if (Auth::check())
-							<li><a href="#"><i class="fa fa-star"></i> Rating (369)</a></li>
+							
 								<li><a href="cart.html"><i class="fa fa-envelope-o"></i> Inbox (5) </a></li>
-								<li><a href="{{route('dashboard')}}"><i class="fa fa-user"></i> {{ Auth::user()->getFirstname() }}</a></li>
+								<li><a href="{{route('chat')}}"><i class="fa fa-group"></i> Chats</a></li>
+								<li><a href="{{route('dashboard', Auth::user()->firstname)}}"><i class="fa fa-user"></i> {{ Auth::user()->getFirstname() }}</a></li>
 								<li><a href="{{route('logout')}}"><i class="fa fa-lock"></i> Logout</a></li>
 								@else
 								<li><a href="{{route('signup')}}"><i class="fa fa-user"></i> Create Account</a></li>
